@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, screen, act, getByLabelText, getByTestId } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import ContactForm from "./ContactForm";
 
 test('test to render', () => {
@@ -34,7 +34,7 @@ test('Changing input values', () => {
     fireEvent.change(firstName, { target: { value: 'Batman' } });
 
     expect(firstName).toBeInTheDocument('Batman');
-    
+
     fireEvent.click(screen.getByTestId(/submit/i));
 
 })
